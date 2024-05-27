@@ -28,18 +28,24 @@ const Create = () => {
     if (!create) {
       return
     }
-    const a = async () => {
-      await axios.post('http://localhost:3000/createCar', {
-        brand: brand,
-        status: status,
-        dateOfRealise: dateOfRealise,
-        innerColor: innerColor,
-        externalColor: externalColor,
-        transmission: transmission,
-      });
+
+    try {
+      const a = async () => {
+        await axios.post('http://localhost:3000/createCar', {
+          brand: brand[0].title,
+          status: status[0].value,
+          dateOfRealise: dateOfRealise[0].value,
+          innerColor: innerColor[0].value,
+          externalColor: externalColor[0].value,
+          transmission: transmission[0].value,
+        });
+      }
+
+      a();
+    } catch (e) {
+      alert(e);
     }
 
-    a();
   }, [create])
 
   return (
