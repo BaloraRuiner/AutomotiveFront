@@ -56,7 +56,7 @@ const Create = () => {
     }}>
       <Typography variant={'h2'}>Создать машину</Typography>
       <div style={{display: 'flex', gap: '10px', flexDirection: 'column', width: '200px'}}>
-        <Select placeHolder={'Марка'} selected={brand} elements={brandList} onChange={setBrand}/>
+        <Select placeHolder={'Модель'} selected={brand} elements={brandList} onChange={setBrand}/>
         <Select placeHolder={'Статус'} selected={status} elements={statusList} onChange={setStatus}/>
         <Select placeHolder={'Год выпуска'} selected={dateOfRealise} elements={yearOfRealise}
                 onChange={setDateOfRealise}/>

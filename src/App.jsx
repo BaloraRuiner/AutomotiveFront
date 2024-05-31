@@ -4,6 +4,7 @@ import Filter from "./pages/filter.jsx";
 import {useState} from "react";
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Create from "./pages/create.jsx";
+import {Typography} from "@mui/material";
 
 function App() {
   const [cars, setCars] = useState([]);
@@ -15,12 +16,28 @@ function App() {
       <Routes>
         <Route path='/getCars' element={
           <div style={{padding: '20px'}}>
-          <Filter setCars={setCars}/>
-          <CarsList cars={cars}/>
+            <Typography
+              align={'center'}
+              variant={'h2'}
+              fontWeight={600}
+              paddingBottom={'20px'}
+            >
+              Каталог машин на заводе ЛАДА
+            </Typography>
+            <Filter setCars={setCars}/>
+            <CarsList cars={cars}/>
           </div>
         }/>
         <Route path='/getDetails' element={
           <div style={{padding: '20px'}}>
+            <Typography
+              align={'center'}
+              variant={'h2'}
+              fontWeight={600}
+              paddingBottom={'20px'}
+            >
+              Каталог деталей на заводе ЛАДА
+            </Typography>
             <Filter setCars={setCars}/>
             <CarsList cars={cars}/>
           </div>

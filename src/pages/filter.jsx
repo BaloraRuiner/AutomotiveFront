@@ -37,7 +37,7 @@ const Filter = ({setCars}) => {
 
   return (
     <div style={{display: 'flex', gap: '10px'}} >
-      <Select placeHolder={'Марка'} selected={brand} elements={brandList} onChange={setBrand} />
+      <Select placeHolder={'Модель'} selected={brand} elements={brandList} onChange={setBrand} />
       <Select placeHolder={'Статус'} selected={status} elements={statusList} onChange={setStatus} />
       <Select placeHolder={'Год выпуска'} selected={dateOfRealise} elements={yearOfRealise} onChange={setDateOfRealise} />
       <Select placeHolder={'Цвет салона'} selected={innerColor} elements={innerColorList} onChange={setInnerColor} />
